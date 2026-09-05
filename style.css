@@ -196,3 +196,38 @@ nav a.active {
 nav a:hover {
   border-bottom: 1px solid #aaa;
 }
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1.2rem 0;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.4rem 0.8rem;
+
+  border: 1px solid #bbb;
+  border-radius: 6px;
+
+  color: #111;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition: border-color 0.2s,
+              background-color 0.2s;
+}
+
+.profile-links a:hover {
+  border-color: #111;
+  background-color: #f7f7f7;
+}
+
+.profile-links i {
+  font-size: 1rem;
+}
