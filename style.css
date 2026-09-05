@@ -182,3 +182,17 @@ footer {
     padding-bottom: 110px;
   }
 }
+
+nav a {
+  color: #111;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+nav a.active {
+  border-bottom: 1px solid #111;
+}
+
+nav a:hover {
+  border-bottom: 1px solid #aaa;
+}
