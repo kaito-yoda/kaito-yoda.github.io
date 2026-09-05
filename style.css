@@ -5,6 +5,7 @@
   --line: #e5e5e5;
   --line-dark: #b8b8b8;
   --background: #ffffff;
+  --accent: #2f5d7c;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -98,7 +99,10 @@ main {
   padding-top: 64px;
   padding-bottom: 96px;
 }
-h1, h2 { line-height: 1.35; }
+h1, h2 {
+  line-height: 1.35;
+  color: #222;
+}
 h1 {
   margin: 0 0 2.5rem;
   font-size: clamp(2rem, 4vw, 2.55rem);
@@ -112,6 +116,16 @@ h2 {
   font-size: 1.22rem;
   font-weight: 620;
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+h2::before {
+  content: "";
+  width: 5px;
+  height: 1.3em;
+  background-color: #2f5d7c;
+  border-radius: 2px;
 }
 main > h1 + h2 {
   margin-top: 0;
@@ -251,4 +265,16 @@ nav a:hover {
 
 .profile-links i {
   font-size: 1rem;
+}
+
+nav a.active {
+  color: var(--accent);
+}
+
+nav a.active::after {
+  background: var(--accent);
+}
+
+a:hover {
+  color: var(--accent);
 }
