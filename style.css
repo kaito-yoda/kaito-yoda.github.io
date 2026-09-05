@@ -1,11 +1,12 @@
 /* ---------- Base ---------- */
 :root {
-  --text: #171717;
-  --muted: #6f6f6f;
+  --text: #202124;
+  --muted: #697177;
   --line: #e5e5e5;
   --line-dark: #b8b8b8;
-  --background: #ffffff;
-  --accent: #2f5d7c;
+  --background: #fafbfc;
+  --accent: #315f7d;
+  --accent-light: #eaf1f5;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -19,7 +20,7 @@ body {
   font-size: 16px;
   line-height: 1.85;
   color: var(--text);
-  background: var(--background);
+  background: #fbfbfa;
   -webkit-font-smoothing: antialiased;
 }
 a {
@@ -277,4 +278,39 @@ nav a.active::after {
 
 a:hover {
   color: var(--accent);
+}
+
+main {
+  animation: fadeUp 0.5s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
+}
+
+.profile-links a,
+.paper-link {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-links a:hover,
+.paper-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
