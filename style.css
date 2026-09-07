@@ -339,15 +339,17 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -0.03em;
+  margin: 0.6rem 0 1.5rem;
 }
 
 .hero h1 span {
-  color: #777;
+  font-size: 0.72em;
   font-weight: 400;
+  color: #666;
 }
 
 .eyebrow {
