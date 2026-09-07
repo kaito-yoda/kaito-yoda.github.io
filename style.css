@@ -74,6 +74,9 @@ nav a {
   color: #222;
   text-decoration: none;
   padding-bottom: 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 nav a::after {
@@ -313,4 +316,49 @@ main {
 .paper-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+body {
+  background-color: #fff;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+
+  background-size: 32px 32px;
+}
+
+.hero {
+  min-height: 520px;
+
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+
+  gap: 4rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 span {
+  color: #777;
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: #777;
+}
+
+.research-keywords {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #555;
 }
