@@ -344,12 +344,13 @@ body {
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin: 0.6rem 0 1.5rem;
+  color: #111;
 }
 
 .hero h1 span {
   font-size: 0.72em;
   font-weight: 400;
-  color: #666;
+  color: #1f3a5f;
 }
 
 .eyebrow {
