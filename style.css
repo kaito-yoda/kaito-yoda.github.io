@@ -329,13 +329,7 @@ body {
 }
 
 .hero {
-  min-height: 520px;
-
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  align-items: center;
-
-  gap: 4rem;
+  display: block;
 }
 
 .hero h1 {
