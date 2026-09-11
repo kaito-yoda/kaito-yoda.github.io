@@ -1102,7 +1102,7 @@ main.paper-page {
 
 .profile-record {
   display: grid;
-  grid-template-columns: 395px 1fr;
+  grid-template-columns: 295px 1fr;
   column-gap: 1.5rem;
 
   padding: 1.15rem 0;
