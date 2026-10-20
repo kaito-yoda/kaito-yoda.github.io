@@ -1214,3 +1214,201 @@ main.paper-page {
 
   color: #596269;
 }
+
+/* ==================================
+   Light / Dark Mode
+   ================================== */
+
+/* Toggle button */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--text);
+
+  font-size: 1.1rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* ==================================
+   Dark color palette
+   ================================== */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --text: #e5e9ef;
+  --muted: #a0acb9;
+  --line: #343e4c;
+  --line-dark: #657488;
+  --background: #10151d;
+  --accent: #8bb9de;
+  --accent-light: #23354a;
+}
+
+
+/* Background */
+
+html[data-theme="dark"] body {
+  background-color: #10151d;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  color: var(--text);
+}
+
+
+/* Header */
+
+html[data-theme="dark"] header {
+  background: rgba(16, 21, 29, 0.94);
+  border-bottom-color: var(--line);
+}
+
+html[data-theme="dark"] nav a,
+html[data-theme="dark"] .site-title a {
+  color: var(--text);
+}
+
+html[data-theme="dark"] nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+html[data-theme="dark"] nav a:hover {
+  border-bottom-color: var(--accent);
+}
+
+
+/* General headings */
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2 {
+  color: var(--text);
+}
+
+
+/* Home */
+
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .hero h1 span {
+  color: #d9e9f8;
+}
+
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .research-keywords {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .featured-section {
+  border-top-color: var(--line);
+}
+
+html[data-theme="dark"] .featured-paper {
+  border-top-color: var(--line-dark);
+}
+
+html[data-theme="dark"] .paper-meta,
+html[data-theme="dark"] .paper-authors {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .paper-links a,
+html[data-theme="dark"] .paper-arrow,
+html[data-theme="dark"] .all-publications a {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .paper-links a {
+  border-color: var(--line-dark);
+}
+
+html[data-theme="dark"] .paper-links a:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+
+/* Profile */
+
+html[data-theme="dark"] .profile-links a {
+  color: var(--text);
+  border-color: var(--line-dark);
+}
+
+html[data-theme="dark"] .profile-links a:hover {
+  background-color: #1c2837;
+}
+
+html[data-theme="dark"] .profile-record:hover {
+  background-color: rgba(139, 185, 222, 0.06);
+}
+
+html[data-theme="dark"] .timeline-content::before {
+  box-shadow: 0 0 0 4px #10151d;
+}
+
+
+/* Paper detail pages */
+
+html[data-theme="dark"] .paper-hero {
+  background: rgba(26, 34, 46, 0.9);
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .paper-hero h1 {
+  color: #d9e9f8;
+}
+
+html[data-theme="dark"] .paper-tags span {
+  background: #1b2735;
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+}
